@@ -69,7 +69,7 @@ public class StringUtilsTest {
                 new Object[]{12L, "0,12"},
                 new Object[]{1234L, "12,34"},
                 new Object[]{12345L, "123,45"},
-                new Object[]{123456L, "1 234,56"},
+                new Object[]{123456L, "1234,56"},
                 new Object[]{1234567L, "12 345,67"},
                 new Object[]{12345678L, "123 456,78"},
                 new Object[]{123456789L, "1 234 567,89"},

@@ -84,6 +84,18 @@ public class VendingMachine {
                 "machine.size.cols",
                 4L);
     }
+
+    public Optional<String> productNameAtPosition(Integer rowNumber, Integer colNumber){
+        Optional<Tray> tray = getTrayAtPosition(rowNumber, colNumber);
+        if (tray.isPresent()){
+            return tray.get().firstProductName();
+        } else {
+            return Optional.empty();
+        }
+        //pobierz z trays odpowiednia tacke
+        //pobrac nazwe 1 produktu
+        //zwrocic optional
+    }
 }
 //        if (productProbability < 1) {
 //        Tray tray = Tray
