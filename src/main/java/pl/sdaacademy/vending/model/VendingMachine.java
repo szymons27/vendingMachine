@@ -96,6 +96,24 @@ public class VendingMachine {
         //pobrac nazwe 1 produktu
         //zwrocic optional
     }
+    public Optional<Product> buyProductWithSymbol(String traySymbol) {
+        if (traySymbol.length() != 2) {
+            return Optional.empty();
+        }
+        char symbolLetter = traySymbol.toUpperCase().charAt(0);
+        char symbolNumber = traySymbol.charAt(1);
+        int rowNumber = symbolLetter - 'A';
+        int colNumber = symbolNumber - '1';
+        if (rowNumber < 0 || rowNumber >= rowsCount || colNumber < 0 || colNumber >= colsCount) {
+            return Optional.empty();
+        }
+        Tray tray = trays[rowNumber][colNumber];
+        if (tray == null) {
+            return Optional.empty();
+        } else {
+            return tray.buyProduct();
+        }
+    }
 }
 //        if (productProbability < 1) {
 //        Tray tray = Tray

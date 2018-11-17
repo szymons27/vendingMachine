@@ -1,5 +1,6 @@
 package pl.sdaacademy.vending.vending;
 
+import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.Tray;
 import pl.sdaacademy.vending.model.VendingMachine;
 import pl.sdaacademy.vending.util.StringUtils;
@@ -45,6 +46,10 @@ public class CustomerOperationController {
             System.out.println();
         }
 
+    }
+
+    public Optional<Product> buyProductForSymbol(String traySymbol){
+        return machine.buyProductWithSymbol(traySymbol);
     }
 
     private void printName(int currentRow, int currentCol) {
