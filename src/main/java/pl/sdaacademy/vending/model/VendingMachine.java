@@ -28,40 +28,40 @@ public class VendingMachine {
         }
 
         trays = new Tray[rowsCount.intValue()][colsCount.intValue()];
-        Random random = new Random();
-        for (int rowNumber = 0; rowNumber < rowsCount; rowNumber++) {
-            for (int colNumber = 0; colNumber < trays.length; colNumber++) {
-                if (Math.random() < 0.8) {
-                    generateTrayAtPosition(rowNumber, colNumber);
-                    if (Math.random() < 0.5) {
-                        if (Math.random() < 0.1) {
-                        }
-                    }
-                }
-            }
-        }
+//        Random random = new Random();
+//        for (int rowNumber = 0; rowNumber < rowsCount; rowNumber++) {
+//            for (int colNumber = 0; colNumber < trays.length; colNumber++) {
+//                if (Math.random() < 0.8) {
+//                    generateTrayAtPosition(rowNumber, colNumber);
+//                    if (Math.random() < 0.5) {
+//                        if (Math.random() < 0.1) {
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
 
-    private void generateTrayAtPosition(int rowNumber, int colNumber) {
-        Random random = new Random();
-        long price = random.nextInt(901) + 100;
-        char symbolLetter = (char) ('A' + rowNumber);
-        int symbolNumber = colNumber + 1;
-        String symbol = "" + symbolLetter + symbolNumber;
-
-        Tray.Builder trayBuilder = Tray.builder(symbol).price(price);
-        int productProbability = random.nextInt(10);
-        if (productProbability < 5){
-            trayBuilder = trayBuilder
-                    .product(new Product("Product " + symbol));
-        }
-        if (productProbability < 1){
-            trayBuilder = trayBuilder
-                    .product(new Product("Product" + symbol));
-        }
-        trays[rowNumber][colNumber] = trayBuilder.build();
-
-    }
+//    private void generateTrayAtPosition(int rowNumber, int colNumber) {
+//        Random random = new Random();
+//        long price = random.nextInt(901) + 100;
+//        char symbolLetter = (char) ('A' + rowNumber);
+//        int symbolNumber = colNumber + 1;
+//        String symbol = "" + symbolLetter + symbolNumber;
+//
+//        Tray.Builder trayBuilder = Tray.builder(symbol).price(price);
+//        int productProbability = random.nextInt(10);
+//        if (productProbability < 5) {
+//            trayBuilder = trayBuilder
+//                    .product(new Product("Product " + symbol));
+//        }
+//        if (productProbability < 1) {
+//            trayBuilder = trayBuilder
+//                    .product(new Product("Product" + symbol));
+//        }
+//        trays[rowNumber][colNumber] = trayBuilder.build();
+//
+//    }
 
     public Optional<Tray> getTrayAtPosition(int rowNumber, int colNumber) {
         try {
@@ -85,9 +85,9 @@ public class VendingMachine {
                 4L);
     }
 
-    public Optional<String> productNameAtPosition(Integer rowNumber, Integer colNumber){
+    public Optional<String> productNameAtPosition(Integer rowNumber, Integer colNumber) {
         Optional<Tray> tray = getTrayAtPosition(rowNumber, colNumber);
-        if (tray.isPresent()){
+        if (tray.isPresent()) {
             return tray.get().firstProductName();
         } else {
             return Optional.empty();
@@ -96,6 +96,7 @@ public class VendingMachine {
         //pobrac nazwe 1 produktu
         //zwrocic optional
     }
+
     public Optional<Product> buyProductWithSymbol(String traySymbol) {
         if (traySymbol.length() != 2) {
             return Optional.empty();
@@ -118,12 +119,14 @@ public class VendingMachine {
 
     public boolean placeTray(Tray tray) {
         String traySymbol = tray.getSymbol();
-        char symbolLetter = traySymbol.toUpperCase().charAt(0);
-        char symbolNumber = traySymbol.charAt(1);
-        int rowNumber = symbolLetter - 'A';
-        int colNumber = symbolNumber - '1';
-        trays[rowNumber][colNumber]= tray;
-        return true;
+        int rowNumber = traySymbol.charAt(0) - 'A';
+        int colNumber = traySymbol.charAt(1) - '1';
+        if (trays[rowNumber][colNumber] == null) {
+            trays[rowNumber][colNumber] = tray;
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 //        if (productProbability < 1) {
