@@ -2,18 +2,17 @@ package pl.sdaacademy.vending.model;
 
 import pl.sdaacademy.vending.util.Configuration;
 
+import java.io.Serializable;
 import java.util.Optional;
 import java.util.Random;
 
-public class VendingMachine {
-
-    private final Configuration configuration;
+public class VendingMachine implements Serializable {
+    public static final long serialVersionUID = 1L;
     private final Long rowsCount;
     private final Long colsCount;
     private Tray[][] trays;
 
     public VendingMachine(Configuration configuration) {
-        this.configuration = configuration;
         rowsCount = configuration.getLongProperty(
                 "machine.size.rows",
                 6L);
@@ -79,11 +78,7 @@ public class VendingMachine {
         return rowsCount;
     }
 
-    public Long colsCount() {
-        return configuration.getLongProperty(
-                "machine.size.cols",
-                4L);
-    }
+    public Long colsCount() {return colsCount; }
 
     public Optional<String> productNameAtPosition(Integer rowNumber, Integer colNumber) {
         Optional<Tray> tray = getTrayAtPosition(rowNumber, colNumber);
