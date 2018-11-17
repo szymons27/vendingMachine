@@ -135,6 +135,7 @@ public class VendingMachineTest {
         assertTrue(success);
         assertEquals(tray, testedMachine.getTrayAtPosition(0, 1).get());
     }
+
     @Test
     public void shouldNotBeAbleToTrayToTakenSpot() {
         // Given
@@ -160,6 +161,28 @@ public class VendingMachineTest {
 //        assertTrue(firstTrayPlacementResult); //obsolete
         assertFalse(secondTrayPlacementResult);
         assertEquals(tray, testedMachine.getTrayAtPosition(0, 1).get());
+    }
+
+    @Test
+    public void shouldNotBeAbleToTrayToNotExistingSpot() {
+        // Given
+        Tray tray = Tray.builder("$$").build();
+        Configuration config = mock(Configuration.class);
+        doReturn(4L)
+                .when(config)
+                .getLongProperty(eq("machine.size.cols"),
+                        anyLong());
+        doReturn(6L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.rows"),
+                        anyLong()
+                );
+        VendingMachine testedMachine = new VendingMachine(config);
+        // When
+        boolean success = testedMachine.placeTray(tray);
+        // Then
+        assertFalse(success);
     }
 
 }

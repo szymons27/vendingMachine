@@ -119,9 +119,14 @@ public class VendingMachine {
 
     public boolean placeTray(Tray tray) {
         String traySymbol = tray.getSymbol();
+        if (traySymbol.length() != 2){
+            return false;
+        }
         int rowNumber = traySymbol.charAt(0) - 'A';
         int colNumber = traySymbol.charAt(1) - '1';
-        if (trays[rowNumber][colNumber] == null) {
+        if (rowNumber < 0 || rowNumber >=rowsCount || colNumber < 0 || colNumber >= colsCount){
+            return false;
+        } else if (trays[rowNumber][colNumber] == null) {
             trays[rowNumber][colNumber] = tray;
             return true;
         }else {
