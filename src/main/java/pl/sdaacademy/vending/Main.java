@@ -3,7 +3,7 @@ package pl.sdaacademy.vending;
 import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.VendingMachine;
 import pl.sdaacademy.vending.util.Configuration;
-import pl.sdaacademy.vending.vending.CustomerOperationController;
+import pl.sdaacademy.vending.controller.CustomerOperationController;
 
 import java.util.Optional;
 import java.util.Scanner;

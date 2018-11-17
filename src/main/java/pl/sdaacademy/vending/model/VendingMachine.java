@@ -4,7 +4,6 @@ import pl.sdaacademy.vending.util.Configuration;
 
 import java.io.Serializable;
 import java.util.Optional;
-import java.util.Random;
 
 public class VendingMachine implements Serializable {
     public static final long serialVersionUID = 1L;

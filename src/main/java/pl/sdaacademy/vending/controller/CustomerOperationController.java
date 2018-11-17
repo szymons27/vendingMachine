@@ -1,4 +1,4 @@
-package pl.sdaacademy.vending.vending;
+package pl.sdaacademy.vending.controller;
 
 import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.Tray;
