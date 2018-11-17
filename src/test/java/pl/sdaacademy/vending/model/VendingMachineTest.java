@@ -113,4 +113,27 @@ public class VendingMachineTest {
         System.out.println("Machine created");
     }
 
+    @Test
+    public void shouldBeAbleToTrayToEmptySpot() {
+        // Given
+        Tray tray = Tray.builder("A2").build();
+        Configuration config = mock(Configuration.class);
+        doReturn(1L)
+                .when(config)
+                .getLongProperty(eq("machine.size.cols"),
+                        anyLong());
+        doReturn(6L)
+                .when(config)
+                .getLongProperty(
+                        eq("machine.size.rows"),
+                        anyLong()
+                );
+        VendingMachine testedMachine = new VendingMachine(config);
+        // When
+        boolean success = testedMachine.placeTray(tray);
+        // Then
+        assertTrue(success);
+        assertEquals(tray, testedMachine.getTrayAtPosition(0, 1).get());
+    }
+
 }

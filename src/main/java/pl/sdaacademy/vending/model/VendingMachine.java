@@ -21,7 +21,7 @@ public class VendingMachine {
             throw new IllegalArgumentException("Row count" + rowsCount + "is invalid");
         }
         colsCount = configuration.getLongProperty(
-                "machine.size.rows",
+                "machine.size.cols",
                 6L);
         if (colsCount <= 0 || colsCount > 9) {
             throw new IllegalArgumentException("Col count" + colsCount + "is invalid");
@@ -113,6 +113,17 @@ public class VendingMachine {
         } else {
             return tray.buyProduct();
         }
+
+    }
+
+    public boolean placeTray(Tray tray) {
+        String traySymbol = tray.getSymbol();
+        char symbolLetter = traySymbol.toUpperCase().charAt(0);
+        char symbolNumber = traySymbol.charAt(1);
+        int rowNumber = symbolLetter - 'A';
+        int colNumber = symbolNumber - '1';
+        trays[rowNumber][colNumber]= tray;
+        return true;
     }
 }
 //        if (productProbability < 1) {

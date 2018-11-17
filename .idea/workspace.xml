@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b894c9-839e-475f-ada2-9a0b139fe08c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/UserMenuSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/vending/CustomerOperationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/vending/CustomerOperationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/sdaacademy/vending/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/sdaacademy/vending/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/sdaacademy/vending/model/VendingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/sdaacademy/vending/model/VendingMachine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/sdaacademy/vending/vending/CustomerOperationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/sdaacademy/vending/vending/CustomerOperationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,35 +26,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
+          <entry key="class" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="36" />
+          <entry key="java" value="38" />
           <entry key="properties" value="6" />
-          <entry key="xml" value="5" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="2" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="36" />
+          <entry key="JAVA" value="38" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="6" />
-          <entry key="XML" value="5" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="42" />
-          <entry key="java" value="12549" />
+          <entry key="java" value="12991" />
           <entry key="properties" value="100" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12549" />
+          <entry key="JAVA" value="12991" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="Properties" value="100" />
           <entry key="XML" value="10" />
@@ -70,44 +65,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/UserMenuSelection.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-              <folding>
-                <element signature="e#1169#1170#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-                <element signature="e#1241#1242#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/vending/CustomerOperationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+            <state relative-caret-position="238">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#printMachine#0;class#CustomerOperationController#0" />
-                <element signature="e#1689#1690#0" expanded="true" />
-                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="method#colsCount#0;class#VendingMachine#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="182">
+              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3006#3007#0" expanded="true" />
-                <element signature="e#3051#3052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,7 +116,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/util/Configuration.java" />
         <option value="$PROJECT_DIR$/src/test/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/util/ConfigurationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/Trau.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/Product.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -148,10 +123,11 @@
         <option value="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/util/StringUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/Tray.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/TrayTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/vending/CustomerOperationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/UserMenuSelection.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java" />
       </list>
     </option>
   </component>
@@ -250,6 +226,57 @@
               <item name="vending" type="462c0819:PsiDirectoryNode" />
               <item name="vending" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="sdaacademy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="sdaacademy" type="462c0819:PsiDirectoryNode" />
+              <item name="vending" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vendingMachine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vendingMachine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pl" type="462c0819:PsiDirectoryNode" />
+              <item name="sdaacademy" type="462c0819:PsiDirectoryNode" />
+              <item name="vending" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -260,7 +287,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542447915341" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542454449692" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -275,14 +302,14 @@
       <recent name="pl.sdaacademy.vending.model" />
       <recent name="pl.sdaacademy.vending.util" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="pl.sdaacademy.vending" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Anna\Documents\repozytorium-sda\vendingMachine\src\test" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Anna\Documents\repozytorium-sda\vendingMachine\src\test" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.sdaacademy.vending" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -297,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.shouldThrowExceptionWhenTooManyColdConfigured">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.Main" />
       <module name="vendingMachine" />
@@ -307,52 +334,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sdaacademy.vending.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sdaacademy.vending.util" />
-      <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.util.StringUtilsTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringUtilsTest.parametersForShouldProperlyFormatMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sdaacademy.vending.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sdaacademy.vending.util" />
-      <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.util.StringUtilsTest" />
-      <option name="METHOD_NAME" value="parametersForShouldProperlyFormatMoney" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringUtilsTest.shouldProperlyFormatMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.sdaacademy.vending.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.sdaacademy.vending.util" />
-      <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.util.StringUtilsTest" />
-      <option name="METHOD_NAME" value="shouldProperlyFormatMoney" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -373,20 +354,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sdaacademy.vending.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sdaacademy.vending.model" />
+      <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.model.VendingMachineTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendingMachineTest.shouldBeAbleToTrayToEmptySpot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sdaacademy.vending.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sdaacademy.vending.model" />
+      <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.model.VendingMachineTest" />
+      <option name="METHOD_NAME" value="shouldBeAbleToTrayToEmptySpot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendingMachineTest.shouldThrowExceptionWhenTooManyColdConfigured" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.sdaacademy.vending.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.sdaacademy.vending.model" />
+      <option name="MAIN_CLASS_NAME" value="pl.sdaacademy.vending.model.VendingMachineTest" />
+      <option name="METHOD_NAME" value="shouldThrowExceptionWhenTooManyColdConfigured" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.StringUtilsTest" />
-      <item itemvalue="JUnit.StringUtilsTest.parametersForShouldProperlyFormatMoney" />
-      <item itemvalue="JUnit.StringUtilsTest.shouldProperlyFormatMoney" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.TrayTest.shouldBeAbleToBuyLastAvilableProduct" />
+      <item itemvalue="JUnit.VendingMachineTest.shouldBeAbleToTrayToEmptySpot" />
+      <item itemvalue="JUnit.VendingMachineTest" />
+      <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenTooManyColdConfigured" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VendingMachineTest.shouldThrowExceptionWhenTooManyColdConfigured" />
+        <item itemvalue="JUnit.VendingMachineTest" />
+        <item itemvalue="JUnit.VendingMachineTest.shouldBeAbleToTrayToEmptySpot" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TrayTest.shouldBeAbleToBuyLastAvilableProduct" />
-        <item itemvalue="JUnit.StringUtilsTest.shouldProperlyFormatMoney" />
-        <item itemvalue="JUnit.StringUtilsTest.parametersForShouldProperlyFormatMoney" />
-        <item itemvalue="JUnit.StringUtilsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -404,35 +431,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StringUtilsTest - 2018.11.04 at 12h 14m 49s.xml">
-      <configuration name="StringUtilsTest" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldBeAbleToTrayToEmptySpot - 2018.11.17 at 12h 13m 24s.xml">
+      <configuration name="VendingMachineTest.shouldBeAbleToTrayToEmptySpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_parametersForShouldProperlyFormatMoney - 2018.11.04 at 12h 14m 55s.xml">
-      <configuration name="StringUtilsTest.parametersForShouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldBeAbleToTrayToEmptySpot - 2018.11.17 at 12h 14m 01s.xml">
+      <configuration name="VendingMachineTest.shouldBeAbleToTrayToEmptySpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_shouldProperlyFormatMoney - 2018.11.04 at 12h 15m 15s.xml">
-      <configuration name="StringUtilsTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldBeAbleToTrayToEmptySpot - 2018.11.17 at 12h 15m 42s.xml">
+      <configuration name="VendingMachineTest.shouldBeAbleToTrayToEmptySpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_shouldProperlyFormatMoney - 2018.11.04 at 12h 16m 37s.xml">
-      <configuration name="StringUtilsTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest - 2018.11.17 at 12h 25m 29s.xml">
+      <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_parametersForShouldProperlyFormatMoney - 2018.11.04 at 12h 18m 36s.xml">
-      <configuration name="StringUtilsTest.parametersForShouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest - 2018.11.17 at 12h 25m 59s.xml">
+      <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_shouldProperlyFormatMoney - 2018.11.04 at 12h 18m 46s.xml">
-      <configuration name="StringUtilsTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldBeAbleToTrayToEmptySpot - 2018.11.17 at 12h 26m 10s.xml">
+      <configuration name="VendingMachineTest.shouldBeAbleToTrayToEmptySpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_shouldProperlyFormatMoney - 2018.11.04 at 12h 21m 39s.xml">
-      <configuration name="StringUtilsTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldBeAbleToTrayToEmptySpot - 2018.11.17 at 12h 26m 59s.xml">
+      <configuration name="VendingMachineTest.shouldBeAbleToTrayToEmptySpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_shouldProperlyFormatMoney - 2018.11.04 at 13h 12m 16s.xml">
-      <configuration name="StringUtilsTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest - 2018.11.17 at 12h 27m 05s.xml">
+      <configuration name="VendingMachineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringUtilsTest_shouldProperlyFormatMoney - 2018.11.04 at 13h 15m 43s.xml">
-      <configuration name="StringUtilsTest.shouldProperlyFormatMoney" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldThrowExceptionWhenTooManyColdConfigured - 2018.11.17 at 12h 33m 14s.xml">
+      <configuration name="VendingMachineTest.shouldThrowExceptionWhenTooManyColdConfigured" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TrayTest_shouldBeAbleToBuyLastAvilableProduct - 2018.11.04 at 14h 48m 16s.xml">
-      <configuration name="TrayTest.shouldBeAbleToBuyLastAvilableProduct" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_shouldThrowExceptionWhenTooManyColdConfigured - 2018.11.17 at 12h 34m 13s.xml">
+      <configuration name="VendingMachineTest.shouldThrowExceptionWhenTooManyColdConfigured" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -538,27 +565,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/Trau.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="113" column="5" lean-forward="true" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/util/ConfigurationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -617,17 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#colsCount#0;class#VendingMachine#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/UserMenuSelection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -654,14 +653,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3006#3007#0" expanded="true" />
             <element signature="e#3051#3052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/sdaacademy/vending/model/VendingMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#colsCount#0;class#VendingMachine#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/sdaacademy/vending/model/VendingMachineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
