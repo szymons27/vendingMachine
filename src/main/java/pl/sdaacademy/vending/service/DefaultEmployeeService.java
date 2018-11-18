@@ -1,6 +1,7 @@
 package pl.sdaacademy.vending.service;
 
 import pl.sdaacademy.vending.controller.service.EmployeeService;
+import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.Tray;
 import pl.sdaacademy.vending.model.VendingMachine;
 import pl.sdaacademy.vending.service.repositories.VendingMachineRepository;
@@ -45,5 +46,23 @@ public class DefaultEmployeeService implements EmployeeService {
         } else {
             return Optional.of("there is no vending machine");
         }
+    }
+
+    @Override
+    public Optional<String> addProduct(String traySymbol, String productName, int productNumber) {
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (!loadedMachine.isPresent()){
+            System.out.println("there is no vending machine, add one by creating it");
+        }
+        VendingMachine machine = loadedMachine.get();
+        for (int addedProductCount = 0; addedProductCount < productNumber; addedProductCount++) {
+            Product product = new Product(productName);
+            if (!machine.addProductToTray(traySymbol, product)) {
+                machineRepository.save(machine);
+                return Optional.of("tray overloaded, cannot apply" + (productNumber - addedProductCount) + "products");
+            }
+        }
+        machineRepository.save(machine);
+        return Optional.empty();
     }
 }

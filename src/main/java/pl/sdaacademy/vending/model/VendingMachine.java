@@ -141,6 +141,22 @@ public class VendingMachine implements Serializable {
         }
         return tray;
     }
+
+    public Boolean addProductToTray(String traySymbol,Product product){
+        return getTrayForSymbol(traySymbol)
+                .map(tray -> tray.addProduct(product))
+                .orElse(false);
+    }
+
+    private Optional<Tray> getTrayForSymbol(String traySymbol){
+        if (traySymbol.length() != 2){
+            return Optional.empty();
+        }
+        int rowNumber = traySymbol.charAt(0) - 'A';
+        int colNumber = traySymbol.charAt(1) - '1';
+        return getTrayAtPosition(rowNumber, colNumber);
+    }
+
 }
 //        if (productProbability < 1) {
 //        Tray tray = Tray
