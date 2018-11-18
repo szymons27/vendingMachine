@@ -94,6 +94,7 @@ public class Main {
                     employeeOperationController.removeTray();
                     break;
                 case ADD_PRODUCT:
+                    employeeOperationController.addProduct();
                     break;
                 case REMOVE_PRODUCT:
                     break;

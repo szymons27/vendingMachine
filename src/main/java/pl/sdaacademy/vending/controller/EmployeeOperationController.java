@@ -13,6 +13,33 @@ public class EmployeeOperationController {
         this.employeeService = employeeService;
     }
 
+    public void addProduct(){
+        String traySymbol = getTraySymbolFromUser();
+        String productName = getProductNameFromUser();
+        Integer numberOfProduct = getNumberOfProduct();
+        Optional<String> errorMessage = employeeService.addProduct(traySymbol, productName, numberOfProduct);
+        System.out.println(errorMessage.orElse("success"));
+
+    }
+
+    private Integer getNumberOfProduct() {
+        Integer numberOfProducts = null;
+        while (numberOfProducts == null) {
+            System.out.println(" > Provide number of products");
+            try {
+                numberOfProducts = Integer.parseInt(getUserInput());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid number of products. Try again.");
+            }
+        }
+        return numberOfProducts;
+    }
+
+    private String getProductNameFromUser() {
+        System.out.println(" > Provide product name: ");
+        return getUserInput().toUpperCase();
+    }
+
     public void addTray() {
         String traySymbol = getTraySymbolFromUser();
         Long trayPice = getTrayPriceFromUser();
