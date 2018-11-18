@@ -12,8 +12,6 @@ import pl.sdaacademy.vending.util.Configuration;
 import java.util.Optional;
 import java.util.Scanner;
 
-import static pl.sdaacademy.vending.ServiceMenuSelection.*;
-
 public class Main {
     Configuration configuration = new Configuration();
     VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
