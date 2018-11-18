@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public enum UserMenuSelection {
     BUY_PRODUCT(1, "Buy product"),
-    EXIT(9, "Exit");
+    EXIT(9, "Exit"),
+    SERVICE_MENU(0, "Service");
 
     private final Integer optionNumber;
     private final String optionText;

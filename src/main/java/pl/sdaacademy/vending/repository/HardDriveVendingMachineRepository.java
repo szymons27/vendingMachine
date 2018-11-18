@@ -38,10 +38,8 @@ public class HardDriveVendingMachineRepository implements VendingMachineReposito
             return Optional.ofNullable(deserialized);
         } catch (IOException e) {
             System.out.println(" Vending Machine repo file not found");
-            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             System.out.println("could not find Vending Machine class");
-            e.printStackTrace();
         }
         return Optional.empty();
     }

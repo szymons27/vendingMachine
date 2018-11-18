@@ -9,9 +9,11 @@ import java.util.Scanner;
 public class EmployeeOperationController {
     private final EmployeeService employeeService;
 
-    public EmployeeOperationController(EmployeeService employeeService){this.employeeService = employeeService;}
+    public EmployeeOperationController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
-    public void addTray(){
+    public void addTray() {
         String traySymbol = getTraySymbolFromUser();
         System.out.println(" > Provide tray symbol: ");
         String symbol = getUserInput();
@@ -25,14 +27,18 @@ public class EmployeeOperationController {
 
     private Long getTrayPriceFromUser() {
         Long price = null;
-        while (price == null){
+        while (price == null) {
             System.out.println(" > Provide tray price");
-            Long.parseLong(getUserInput());
+            try {
+                price = Long.parseLong(getUserInput());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid price. Try again.");
+            }
         }
         return price;
     }
 
-    private String getTraySymbolFromUser(){
+    private String getTraySymbolFromUser() {
         System.out.println(" > Provide tray symbol: ");
         return getUserInput().toUpperCase();
     }

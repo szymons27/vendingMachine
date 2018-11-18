@@ -3,37 +3,45 @@ package pl.sdaacademy.vending.controller;
 import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.Tray;
 import pl.sdaacademy.vending.model.VendingMachine;
+import pl.sdaacademy.vending.service.repositories.VendingMachineRepository;
 import pl.sdaacademy.vending.util.StringUtils;
 
 import java.util.Optional;
 
 public class CustomerOperationController {
-    private final VendingMachine machine;
     private final Integer trayWidth = 12;
+    private final VendingMachineRepository machineRepository;
 
-    public CustomerOperationController(VendingMachine machine) {
-        this.machine = machine;
+    public CustomerOperationController(VendingMachineRepository machineRepository) {
+        this.machineRepository = machineRepository;
     }
 
     public void printMachine() {
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if(!loadedMachine.isPresent()){
+            System.out.println("Vending Machine out of service");
+            return;
+        }
+
+        VendingMachine machine = loadedMachine.get();
         for (int currentRow = 0; currentRow < machine.rowsCount(); currentRow++) {
             for (int currentCol = 0; currentCol < machine.rowsCount(); currentCol++) {
-                printUpperBoundary(currentRow, currentCol);
+                printUpperBoundary(machine, currentRow, currentCol);
             }
             System.out.println();
 
             for (int currentCol = 0; currentCol < machine.rowsCount(); currentCol++) {
-                printSymbol(currentRow, currentCol);
+                printSymbol(machine, currentRow, currentCol);
             }
             System.out.println();
 
             for (int currentCol = 0; currentCol < machine.rowsCount(); currentCol++) {
-                printName(currentRow, currentCol);
+                printName(machine, currentRow, currentCol);
             }
             System.out.println();
 
             for (int currentCol = 0; currentCol < machine.rowsCount(); currentCol++) {
-                printPrice(currentRow, currentCol);
+                printPrice(machine, currentRow, currentCol);
             }
             System.out.println();
 
@@ -41,7 +49,7 @@ public class CustomerOperationController {
             //cena
 
             for (int currentCol = 0; currentCol < machine.rowsCount(); currentCol++) {
-                printLowerBoundary(currentRow, currentCol);
+                printLowerBoundary(machine, currentRow, currentCol);
             }
             System.out.println();
         }
@@ -49,16 +57,26 @@ public class CustomerOperationController {
     }
 
     public Optional<Product> buyProductForSymbol(String traySymbol){
-        return machine.buyProductWithSymbol(traySymbol);
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (loadedMachine.isPresent()) {
+            VendingMachine machine = loadedMachine.get();
+            Optional<Product> boughProduct = machine.buyProductWithSymbol(traySymbol);
+            machineRepository.save(machine);
+            return boughProduct;
+        } else {
+            System.out.println("Vending machine out of service");
+            return Optional.empty();
+        }
+
     }
 
-    private void printName(int currentRow, int currentCol) {
+    private void printName(VendingMachine machine, int currentRow, int currentCol) {
         Optional<String> productName = machine.productNameAtPosition(currentRow, currentCol);
         String formatedName = productName.orElse("--");
         System.out.print("|" + StringUtils.adjustText(formatedName, trayWidth) + "|");
     }
 
-    private void printPrice(int currentRow, int currentCol) {
+    private void printPrice(VendingMachine machine, int currentRow, int currentCol) {
         Optional<Tray> tray = machine.getTrayAtPosition(currentRow, currentCol);
         Long price = tray.map(Tray::getPrice).orElse(0L);
         String formatedMoney = StringUtils.formatMoney(price);
@@ -66,18 +84,18 @@ public class CustomerOperationController {
         System.out.print("|" + centredMoney + "|");
     }
 
-    private void printUpperBoundary(int currentRow, int currentCol) {
+    private void printUpperBoundary(VendingMachine machine,int currentRow, int currentCol) {
         System.out.print(
                 "+" + StringUtils.duplicateText("-", trayWidth) + "+");
     }
 
-    private void printSymbol(int rowNo, int colNo) {
+    private void printSymbol(VendingMachine machine ,int rowNo, int colNo) {
         Optional<Tray> tray = machine.getTrayAtPosition(rowNo, colNo);
         String traySymbol = tray.map(Tray::getSymbol).orElse("--");
         System.out.print("|" + StringUtils.adjustText(traySymbol, trayWidth) + "|");
     }
 
-    private void printLowerBoundary(int currentRow, int currentCol) {
+    private void printLowerBoundary(VendingMachine machine, int currentRow, int currentCol) {
         System.out.print("+" + StringUtils.duplicateText("-", trayWidth) + "+");
     }
 
