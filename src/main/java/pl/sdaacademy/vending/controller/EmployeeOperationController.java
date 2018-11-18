@@ -21,6 +21,13 @@ public class EmployeeOperationController {
         System.out.println(errorMessage.orElse("success"));
     }
 
+    public void removeTray() {
+        String traySymbol = getTraySymbolFromUser();
+        Optional<String> errorMessage = employeeService.removeTrayWithSymbol(traySymbol);
+        System.out.println(errorMessage.orElse("success"));
+
+    }
+
     private Long getTrayPriceFromUser() {
         Long price = null;
         while (price == null) {

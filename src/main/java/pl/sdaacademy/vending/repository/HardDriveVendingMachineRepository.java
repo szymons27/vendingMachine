@@ -3,7 +3,6 @@ package pl.sdaacademy.vending.repository;
 import pl.sdaacademy.vending.model.VendingMachine;
 import pl.sdaacademy.vending.service.repositories.VendingMachineRepository;
 import pl.sdaacademy.vending.util.Configuration;
-import sun.security.krb5.Config;
 
 import java.io.*;
 import java.util.Optional;

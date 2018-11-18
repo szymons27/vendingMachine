@@ -14,18 +14,19 @@ public class VendingMachine implements Serializable {
     public VendingMachine(Configuration configuration) {
         rowsCount = configuration.getLongProperty(
                 "machine.size.rows",
-                6L);
+                3L);
         if (rowsCount <= 0 || rowsCount > 26) {
             throw new IllegalArgumentException("Row count" + rowsCount + "is invalid");
         }
         colsCount = configuration.getLongProperty(
                 "machine.size.cols",
-                6L);
+                3L);
         if (colsCount <= 0 || colsCount > 9) {
             throw new IllegalArgumentException("Col count" + colsCount + "is invalid");
         }
 
         trays = new Tray[rowsCount.intValue()][colsCount.intValue()];
+    }
 //        Random random = new Random();
 //        for (int rowNumber = 0; rowNumber < rowsCount; rowNumber++) {
 //            for (int colNumber = 0; colNumber < trays.length; colNumber++) {
@@ -38,7 +39,7 @@ public class VendingMachine implements Serializable {
 //                }
 //            }
 //        }
-    }
+
 
 //    private void generateTrayAtPosition(int rowNumber, int colNumber) {
 //        Random random = new Random();
