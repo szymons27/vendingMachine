@@ -2,6 +2,7 @@ package pl.sdaacademy.vending.service;
 
 import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.VendingMachine;
+import pl.sdaacademy.vending.model.VendingMachineSnapshot;
 import pl.sdaacademy.vending.service.repositories.CustomerService;
 import pl.sdaacademy.vending.service.repositories.VendingMachineRepository;
 
@@ -27,7 +28,8 @@ public class DefaultCustomerService implements CustomerService {
     }
 
     @Override
-    public Optional<VendingMachine> loadMachineToPrint() {
-        return machineRepository.load();
+    public Optional<VendingMachineSnapshot> loadMachineToPrint() {
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        return loadedMachine.map(VendingMachine::snapshot);
     }
 }
