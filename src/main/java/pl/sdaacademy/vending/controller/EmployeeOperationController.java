@@ -21,6 +21,14 @@ public class EmployeeOperationController {
         System.out.println(errorMessage.orElse("success"));
 
     }
+    public void removeProduct() {
+        String traySymbol = getTraySymbolFromUser();
+        String productName = getProductNameFromUser();
+        Optional<String> errorMessage = employeeService.removeProductWithSymbol(traySymbol, productName);
+        System.out.println(errorMessage.orElse("success"));
+
+    }
+
 
     private Integer getNumberOfProduct() {
         Integer numberOfProducts = null;
@@ -82,7 +90,7 @@ public class EmployeeOperationController {
         //wywołać odpowiednią metodę z serwisu
 
         //wyświetlić komunikat błędu lub potwierdzenie udanej operacji
-        Optional<String> errorMessage = employeeService.removeTrayWithSymbol(traySymbol);
+        Optional<String> errorMessage = employeeService.changePrice(getTraySymbolFromUser(),getTrayPriceFromUser());
         System.out.println(errorMessage.orElse("success"));
     }
 }

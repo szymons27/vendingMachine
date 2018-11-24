@@ -5,7 +5,9 @@ import pl.sdaacademy.vending.controller.EmployeeOperationController;
 import pl.sdaacademy.vending.controller.service.EmployeeService;
 import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.repository.HardDriveVendingMachineRepository;
+import pl.sdaacademy.vending.service.DefaultCustomerService;
 import pl.sdaacademy.vending.service.DefaultEmployeeService;
+import pl.sdaacademy.vending.service.repositories.CustomerService;
 import pl.sdaacademy.vending.service.repositories.VendingMachineRepository;
 import pl.sdaacademy.vending.util.Configuration;
 
@@ -13,11 +15,12 @@ import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
-    Configuration configuration = new Configuration();
-    VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
-    EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository, configuration);
-    EmployeeOperationController employeeOperationController = new EmployeeOperationController(employeeService);
-    CustomerOperationController customerOperationController = new CustomerOperationController(vendingMachineRepository);
+    private Configuration configuration = new Configuration();
+    private VendingMachineRepository vendingMachineRepository = new HardDriveVendingMachineRepository(configuration);
+    private EmployeeService employeeService = new DefaultEmployeeService(vendingMachineRepository, configuration);
+    private CustomerService customerService = new DefaultCustomerService(vendingMachineRepository);
+    private EmployeeOperationController employeeOperationController = new EmployeeOperationController(employeeService);
+    private CustomerOperationController customerOperationController = new CustomerOperationController(customerService);
 
     private void startApplication() {
         while (true) {
@@ -27,14 +30,7 @@ public class Main {
                 UserMenuSelection userSelection = getUserSelection();
                 switch (userSelection) {
                     case BUY_PRODUCT:
-                        System.out.println("Choice tray number");
-                        String userChoice = new Scanner(System.in).nextLine();
-                        Optional<Product> boughProduct = customerOperationController.buyProductForSymbol(userChoice);
-                        if (boughProduct.isPresent()) {
-                            System.out.println("bough product" + boughProduct.get().getName());
-                        } else {
-                            System.out.println("Run out of reinforcements");
-                        }
+                        customerOperationController.buyProduct();
                         break;
                     case EXIT:
                         System.out.println("Bye");
@@ -97,8 +93,10 @@ public class Main {
                     employeeOperationController.addProduct();
                     break;
                 case REMOVE_PRODUCT:
+                    employeeOperationController.removeProduct();
                     break;
                 case CHANGE_PRICE:
+                    employeeOperationController.changePrice();
                     break;
                 case EXIT:
                     System.out.println("going back to user menu");

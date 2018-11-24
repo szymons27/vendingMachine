@@ -47,6 +47,19 @@ public class Tray implements Serializable {
             }
     }
 
+    public boolean removeProduct(Product product) {
+        if (!products.isEmpty()){
+            products.remove(product);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void updatedPrice(Long price) {
+        this.price = price;
+    }
+
 
     public static class Builder {
 
@@ -74,6 +87,7 @@ public class Tray implements Serializable {
             }
             return new Tray(this);
         }
+
     }
 
 }

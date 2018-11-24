@@ -1,5 +1,6 @@
 package pl.sdaacademy.vending.model;
 
+import pl.sdaacademy.vending.controller.EmployeeOperationController;
 import pl.sdaacademy.vending.util.Configuration;
 
 import java.io.Serializable;
@@ -158,13 +159,27 @@ public class VendingMachine implements Serializable {
     }
 
     public boolean updatePriceForSymbol(String traySymbol, Long updatedPrice){
-
-        if(!traySymbol.isEmpty()){
-
+        Optional<Tray> trayForSymbol = getTrayForSymbol(traySymbol);
+        if(trayForSymbol.isPresent()){
+            trayForSymbol.get().updatedPrice(updatedPrice);
+            return true;
         }
+
         return false;
     }
 
+    public Optional<Tray> removeProductWithSymbol(String traySymbol, String productName) {
+        if (traySymbol.length() != 2){
+            return Optional.empty();
+        }
+        int rowNumber = traySymbol.charAt(0) - 'A';
+        int colNumber = traySymbol.charAt(1) - '1';
+        Optional<Tray> tray = getTrayAtPosition(rowNumber, colNumber);
+        if (tray.isPresent()){
+        }
+        return tray;
+
+    }
 }
 //        if (productProbability < 1) {
 //        Tray tray = Tray

@@ -67,6 +67,24 @@ public class DefaultEmployeeService implements EmployeeService {
     }
 
     @Override
+    public Optional<String> removeProductWithSymbol(String traySymbol, String productName) {
+        Optional<VendingMachine> loadedMachine = machineRepository.load();
+        if (loadedMachine.isPresent()){
+            VendingMachine machine = loadedMachine.get();
+            Optional<Tray> removedProduct = machine.removeProductWithSymbol(traySymbol, productName);
+            if (removedProduct.isPresent()){
+                machineRepository.save(machine);
+                return Optional.empty();
+            } else {
+                return Optional.of("product could not be removed");
+            }
+
+        } else {
+            return Optional.of("there is no vending machine");
+        }
+    }
+
+    @Override
     public Optional<String> changePrice(String traySymbol, Long updatedPrice) {
         Optional<VendingMachine> loadedMachine = machineRepository.load();
         if (loadedMachine.isPresent()){

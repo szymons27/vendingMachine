@@ -9,5 +9,6 @@ public interface EmployeeService {
     Optional<String> removeTrayWithSymbol(String traySymbol);
     Optional<String> addProduct(String traySymbol, String productName, int productNumber);
     Optional<String> changePrice(String traySymbol, Long updatedPrice);
+    Optional<String> removeProductWithSymbol(String traySymbol, String productName);
 }
 
