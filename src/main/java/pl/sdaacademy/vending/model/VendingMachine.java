@@ -157,6 +157,14 @@ public class VendingMachine implements Serializable {
         return getTrayAtPosition(rowNumber, colNumber);
     }
 
+    public boolean updatePriceForSymbol(String traySymbol, Long updatedPrice){
+
+        if(!traySymbol.isEmpty()){
+
+        }
+        return false;
+    }
+
 }
 //        if (productProbability < 1) {
 //        Tray tray = Tray

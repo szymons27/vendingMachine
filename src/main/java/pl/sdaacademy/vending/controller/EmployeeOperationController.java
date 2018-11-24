@@ -76,4 +76,13 @@ public class EmployeeOperationController {
     private String getUserInput() {
         return new Scanner(System.in).nextLine();
     }
+
+    public void changePrice(){
+        //pobierz od użytkownika symbol tacki, nową cenę
+        //wywołać odpowiednią metodę z serwisu
+
+        //wyświetlić komunikat błędu lub potwierdzenie udanej operacji
+        Optional<String> errorMessage = employeeService.removeTrayWithSymbol(traySymbol);
+        System.out.println(errorMessage.orElse("success"));
+    }
 }
