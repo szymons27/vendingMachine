@@ -4,7 +4,6 @@ import pl.sdaacademy.vending.model.Product;
 import pl.sdaacademy.vending.model.Tray;
 import pl.sdaacademy.vending.model.VendingMachine;
 import pl.sdaacademy.vending.service.repositories.CustomerService;
-import pl.sdaacademy.vending.service.repositories.VendingMachineRepository;
 import pl.sdaacademy.vending.util.StringUtils;
 
 import java.util.Optional;

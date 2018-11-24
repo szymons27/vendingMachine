@@ -180,6 +180,25 @@ public class VendingMachine implements Serializable {
         return tray;
 
     }
+
+    public VendingMachineSnapshot snapshot() {
+        VendingMachineSnapshot.Builder snapBuild = VendingMachineSnapshot.builder(rowsCount.intValue(), colsCount.intValue());
+        //pobierz builder snapshotu
+        for (int i = 0; i < rowsCount; i++){
+            for (int j = 0; j < colsCount; j++){
+                Tray tray = trays[i][j];
+                if (tray != null){
+                    snapBuild.tray(i,j,tray.snapshot());
+                }
+            }
+
+        }
+        return snapBuild.build();
+        //przejsc po wszystkich tackach
+        //wywolac na nich operacje snapshotu
+        //zapisz snapshot tacki w builderze
+        //zwroc zbudowany obiekt
+    }
 }
 //        if (productProbability < 1) {
 //        Tray tray = Tray

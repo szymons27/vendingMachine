@@ -60,6 +60,10 @@ public class Tray implements Serializable {
         this.price = price;
     }
 
+    public TraySnapshot snapshot() {
+        return new TraySnapshot(symbol,price,firstProductName().orElse("--"));
+    }
+
 
     public static class Builder {
 
